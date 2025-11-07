@@ -111,6 +111,15 @@ fun Formulir(onSubmitClick: (String, String, String, String) -> Unit)
                             Text(text = item)
                         }
                     }
+
+                    Text(stringResource(id=R.string.alamat), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                    OutlinedTextField(
+                        value = textAlamat,
+                        onValueChange = { textAlamat = it },
+                        label = { Text("Alamat") },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
         }
