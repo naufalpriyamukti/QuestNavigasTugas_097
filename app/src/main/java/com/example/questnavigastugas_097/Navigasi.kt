@@ -45,7 +45,29 @@ fun Prak6App(
                 )
             }
 
+            // Halaman Tampil Data
+            composable(
+                route = "${com.example.prak6.Navigasi.TampilData.name}/{nama}/{jenis}/{status}/{alamat}"
+            ) { backStackEntry ->
+                val nama = backStackEntry.arguments?.getString("nama") ?: ""
+                val jenis = backStackEntry.arguments?.getString("jenis") ?: ""
+                val status = backStackEntry.arguments?.getString("status") ?: ""
+                val alamat = backStackEntry.arguments?.getString("alamat") ?: ""
+
+                TampilData(
+                    nama = nama,
+                    jenis = jenis,
+                    status = status,
+                    alamat = alamat,
+                    onBerandaClick = {
+                        navController.navigate(com.example.prak6.Navigasi.HomeDepan.name)
+                    },
+                    onFormulirClick = {
+                        navController.navigate(com.example.prak6.Navigasi.Formulir.name)
+                    }
+                )
+            }
+
         }
     }
-
 }
