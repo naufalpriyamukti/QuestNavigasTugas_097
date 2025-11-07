@@ -132,6 +132,17 @@ fun TampilData(
 
         Spacer(modifier = Modifier.height(12.dp))
 
+        // Tombol Formulir Pendaftaran
+        Button(
+            onClick = onFormulirClick,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFD1C4E9))
+        ) {
+            Text("Formulir Pendaftaran", color = Color.Black, fontSize = 16.sp)
+        }
+
 
     }
 }
