@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -114,6 +116,21 @@ fun TampilData(
                 Text(alamat, fontStyle = FontStyle.Italic, fontSize = 16.sp,  fontFamily = FontFamily.Cursive)
             }
         }
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        // Tombol Beranda
+        Button(
+            onClick = onBerandaClick,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF9C27B0))
+        ) {
+            Text("Beranda", color = Color.White, fontSize = 16.sp)
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
 
 
     }
