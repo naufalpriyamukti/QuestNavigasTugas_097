@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 enum class Navigasi {
@@ -23,7 +24,17 @@ fun Prak6App(
             navController = navController,
             startDestination = com.example.prak6.Navigasi.HomeDepan.name,
             modifier = Modifier.padding(innerPadding)
-        )
+        ){
+            // Halaman Selamat Datang
+            composable(com.example.prak6.Navigasi.HomeDepan.name) {
+                HomeDepan(
+                    onSubmitClick = {
+                        navController.navigate(com.example.prak6.Navigasi.Formulir.name)
+                    }
+                )
+            }
+
+        }
     }
 
 }
