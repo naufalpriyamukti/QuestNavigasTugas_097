@@ -6,8 +6,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -49,6 +52,17 @@ fun HomeDepan(onSubmitClick: () -> Unit) {
         Spacer(modifier = Modifier.height(24.dp))
         Text("Naufal Priyamukti Wibowo", color = Color.Black, fontSize = 18.sp)
         Text("20230140097", color = Color.Gray, fontSize = 14.sp)
+
+        Spacer(modifier = Modifier.height(40.dp))
+        Button(
+            onClick = onSubmitClick,
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF7B1FA2)),
+            modifier = Modifier
+                .fillMaxWidth(0.5f)
+                .height(48.dp)
+        ) {
+            Text("Submit", color = Color.White)
+        }
 
 
 
