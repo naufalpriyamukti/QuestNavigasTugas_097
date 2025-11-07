@@ -34,6 +34,17 @@ fun Prak6App(
                 )
             }
 
+            // Halaman Formulir Pendaftaran
+            composable(com.example.prak6.Navigasi.Formulir.name) {
+                Formulir(
+                    onSubmitClick = { nama, jenis, status, alamat ->
+                        navController.navigate(
+                            "${com.example.prak6.Navigasi.TampilData.name}/$nama/$jenis/$status/$alamat"
+                        )
+                    }
+                )
+            }
+
         }
     }
 
