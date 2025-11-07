@@ -48,7 +48,7 @@ fun HomeDepan(onSubmitClick: () -> Unit) {
 
         Spacer(modifier = Modifier.height(24.dp))
         Text("Naufal Priyamukti Wibowo", color = Color.Black, fontSize = 18.sp)
-        Text("20250140001", color = Color.Gray, fontSize = 14.sp)
+        Text("20230140097", color = Color.Gray, fontSize = 14.sp)
 
 
 
