@@ -66,6 +66,13 @@ fun Formulir(onSubmitClick: (String, String, String, String) -> Unit)
                 elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
             )
             {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                )
+                {
+
+                }
 
             }
         }
